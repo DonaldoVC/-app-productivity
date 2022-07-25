@@ -41,31 +41,33 @@ const TaskChart = () => {
     <div className={styles.main}>
       <h5>{`Tareas del ${moment().subtract("days", 7).date()} al ${moment().date()}`}</h5>
 
-      <svg viewBox="0 0 200 200">
-        <VictoryPie
-          colorScale={[ "tomato", "orange", "navy" ]}
-          data={data}
-          style={{ labels: { fontSize: 7 } }}
-          standalone={false}
-          width={400}
-          height={400}
-          origin={{ x: 100, y: 100 }}
-          radius={50}
-        />
+      {taskSelector.all_tasks.length > 0 && (
+        <svg viewBox="0 0 200 200">
+          <VictoryPie
+            colorScale={[ "tomato", "orange", "navy" ]}
+            data={data}
+            style={{ labels: { fontSize: 7 } }}
+            standalone={false}
+            width={400}
+            height={400}
+            origin={{ x: 100, y: 100 }}
+            radius={50}
+          />
 
-        <VictoryPie
-          data={data}
-          colorScale={[ "tomato", "orange", "navy" ]}
-          labelRadius={15}
-          width={400}
-          height={400}
-          style={{ labels: { fontSize: 10, fill: "white" } }}
-          labels={({ datum }) => datum.y}
-          standalone={false}
-          origin={{ x: 100, y: 100 }}
-          radius={50}
-        />
-      </svg>
+          <VictoryPie
+            data={data}
+            colorScale={[ "tomato", "orange", "navy" ]}
+            labelRadius={15}
+            width={400}
+            height={400}
+            style={{ labels: { fontSize: 10, fill: "white" } }}
+            labels={({ datum }) => datum.y}
+            standalone={false}
+            origin={{ x: 100, y: 100 }}
+            radius={50}
+          />
+        </svg>
+      )}
     </div>
   )
 }
