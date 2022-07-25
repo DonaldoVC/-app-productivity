@@ -1,1 +1,3 @@
-/// <reference types="react-scripts" />
+type ReactAppEnv = {
+  REACT_APP_API: string;
+}

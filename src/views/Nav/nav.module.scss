@@ -1,0 +1,52 @@
+.main, .mainHidden {
+  height: 100vh;
+  background-color: var(--color-nav);
+  position: relative;
+  box-shadow: 0 0 0.1rem 0 var(--color-black);
+  padding-left: 1rem;
+
+  & > h3 {
+    margin: 2rem 1rem 3rem 0;
+    font-weight: bold;
+    color: var(--color-white);
+  }
+
+  & > .float {
+    margin-top: 5rem;
+  }
+
+  & > a, a:visited, a:hover, a:active, button {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: var(--color-white);
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    padding-bottom: 0.3rem;
+
+    & > img {
+      width: 1.2rem;
+      filter: invert(100%);
+      margin-right: 0.5rem;
+    }
+  }
+
+  & > div {
+    width: 3.5rem;
+
+    & > img {
+      filter: invert(100%);
+      position: absolute;
+      width: 1.5rem;
+      bottom: 1rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.mainHidden > h3 {
+  margin: 2rem 0 3rem 0;
+}

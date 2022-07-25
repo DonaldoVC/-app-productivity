@@ -1,0 +1,9 @@
+.main {
+  width: 27rem;
+  margin: 2rem 0;
+  padding-right: 2rem;
+
+  & > h5 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@actions/*": [
+        "./actions/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
+      ],
+      "@constants/*": [
+        "./constants/*"
+      ],
+      "@containers/*": [
+        "./containers/*"
+      ],
+      "@hooks/*": [
+        "./hooks/*"
+      ],
+      "@modals/*": [
+        "./modals/*"
+      ],
+      "@reducers": [
+        "./reducers/index.ts"
+      ],
+      "@schemas/*": [
+        "./schemas/*"
+      ],
+      "@selectors/*": [
+        "./selectors/*"
+      ],
+      "@utils/*": [
+        "./utils/*"
+      ],
+      "@views/*": [
+        "./views/*"
+      ]
+    }
+  }
+}

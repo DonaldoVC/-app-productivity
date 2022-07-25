@@ -1,0 +1,15 @@
+.loader {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  position: fixed;
+  background-color: var(--color-loader);
+  height: 100%;
+  z-index: 100000000000;
+
+  & > div {
+    margin: auto;
+  }
+}

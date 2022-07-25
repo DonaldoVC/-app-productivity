@@ -1,25 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Navigate, Route, Routes} from "react-router-dom";
 
+import Board from "@containers/Board/Board";
+import Chart from "@containers/Chart/Chart";
+
+import Loader from "@views/Loader/Loader";
+import Nav from "@views/Nav/Nav";
+
+import styles from "./app.module.scss";
+
+/**
+ * Content all the containers, navbar and loader
+ */
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className={styles.main}>
+        <Nav />
+        <Routes>
+          <Route
+            path="/board"
+            element={<Board />}
+          />
+          <Route
+            path="/chart"
+            element={<Chart />}
+          />
+
+          <Route path="*" element={<Navigate to="/board" />} />
+        </Routes>
+      </div>
+      <Loader />
+    </>
   );
 }
 

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'LatoRegular';
+  src: url('../font/Lato-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LatoHeavy';
+  src: url('../font/Lato-Heavy.ttf');
+  font-style: normal;
+}
+
+html:root {
+  --font-extra-small: 0.6rem;
+  --font-small: 0.7rem;
+  --font-medium: 0.855rem;
+  --font-big: 1.4rem;
+  --font-extra-big: 3rem;
+}
