@@ -1,10 +1,13 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
+import {useDispatch} from "react-redux";
 
 import arrowLeft from "@assets/arrow-left.svg";
 import arrowRight from "@assets/arrow-right.svg";
 import boardIcon from "@assets/board.png";
 import chartIcon from "@assets/chart.png";
+
+import {graph} from "@actions/task.action";
 
 import styles from "./nav.module.scss";
 
@@ -12,6 +15,8 @@ import styles from "./nav.module.scss";
  * Render the navigation bar
  */
 const Nav = () => {
+  const dispatch = useDispatch();
+
   const [show, setShow] = useState(true);
 
   return (
@@ -29,7 +34,7 @@ const Nav = () => {
             Grafica
           </Link>
 
-          <button className={styles.float}>
+          <button className={styles.float} onClick={dispatch.bind(this, graph())}>
             Precargar tareas
           </button>
         </>
